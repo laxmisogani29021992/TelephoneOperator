@@ -6,14 +6,14 @@ import TelephoneOperatorCollection
 
 try:
 	# Taking input for the number of operators
-	number_of_operating_units = int(input("Please enter the number of operating units:"))
+	number_of_operating_units = int(input("Please enter the number of operators:"))
 	operators = TelephoneOperatorCollection.TelephoneOperatorCollection()
 
 	# Taking input for the prefix and price for each operator
 	for index_of_unit in range(number_of_operating_units):
 		prefix_price_list = TelephoneOperator.TelephoneOperator()
-		print "\nPlease enter price list for {} operator:".format(index_of_unit + 1)
-		number_of_prefixes = int(input("Please enter the number of prefixes for unit {}:".format(index_of_unit + 1)))
+		print "\nPlease enter price list for operator {}:".format(index_of_unit + 1)
+		number_of_prefixes = int(input("Please enter the number of prefixes for operator {}:".format(index_of_unit + 1)))
 		for index_of_prefixes in range(number_of_prefixes):
 			prefix_price_list.readPrefixPrice()
 		operators.updateOperator(prefix_price_list)
